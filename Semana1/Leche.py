@@ -5,6 +5,7 @@ class Leche:
         self.precioPorLitro = precioPorLitro
         
     
+    
     def IngresarDatos(self):
         self.litrosProducidos = float(input("Ingrese la cantidad de litros producidos --> "))
         self.precioPorLitro = float(input("Ingrese el precio por litro --> "))

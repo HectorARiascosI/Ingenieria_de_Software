@@ -12,6 +12,8 @@ class Trabajador:
     def CalcularSueldo(self):
         self.sueldoSemanal = self.horasTrabajadas * self.pagoPorHora
     
+    
+    
     def MostrarSueldo(self):
         print(f"El sueldo semanal es: {self.sueldoSemanal:.2f}")
 
