@@ -8,7 +8,7 @@ class Pulgaditas:
 
     def ingresar_valor(self):
         # Solicita al usuario que ingrese un valor en metros
-        self.entrada = input("Ingrese la medida de la tela en metros ---->  ")
+        self.entrada = input("Ingresarr la medida de la tela en metros ---->  ")
         return self.entrada
 
     def valor_correcto_ingresado(self):
