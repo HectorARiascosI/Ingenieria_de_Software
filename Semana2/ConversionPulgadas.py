@@ -1,34 +1,31 @@
 class Pulgaditas:
-    
-    # No hay atributos
-    
-    def MetrosAPulgadas(self,metros):
-        self.metros = metros
-        self.pulgadas=pulgadas
-        pulgadas = metros / 0.0254
-        return 
-    
-    def ingresarValor(self):
-        
-        self.entrada = entrada
-        
-        entrada = input("Ingrese la medida de la tela en metros ---->  ")
-        return entrada
-        
-    #para verificar medidas positivas y no cadenas de letras o comas o puntos falsos
-    
+    # No hay atributos en el constructor porque se inicializan en los métodos
 
-    
-    def valorCorrectoIngresado(self):
-        
+    def metros_a_pulgadas(self, metros):
+        # Convierte metros a pulgadas
+        pulgadas = metros / 0.0254
+        return pulgadas
+
+    def ingresar_valor(self):
+        # Solicita al usuario que ingrese un valor en metros
+        self.entrada = input("Ingrese la medida de la tela en metros ---->  ")
+        return self.entrada
+
+    def valor_correcto_ingresado(self):
+        # Verifica si la entrada es un número válido
         if self.entrada.replace('.', '', 1).isdigit():
+            metros = float(self.entrada)
             
-            self.entradas = float(self.entrada)
-            
-            if self.metros >= 0 :
-                
-                self.pulgadas= conversor.MetrosAPulgadas(self.metros)
-                
-                print(f"La medida de la tela en pulgadas es: {self.pulgadas:.2f} pulgadas")
-                
+            # Verifica si la medida es positiva
+            if metros >= 0:
+                pulgadas = self.metros_a_pulgadas(metros)
+                print(f"La medida de la tela en pulgadas es: {pulgadas:.2f} pulgadas")
+            else:
+                print("Dato ingresado incorrecto, la medida debe ser un número positivo.")
+        else:
+            print("Error: Ingrese un número válido por favor.")
+
+# Crear una instancia de la clase Pulgaditas
 conversor = Pulgaditas()
+conversor.ingresar_valor()
+conversor.valor_correcto_ingresado()
